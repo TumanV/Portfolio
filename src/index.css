@@ -11,3 +11,554 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/*!*скидываем все margin и padding.их браузер устанавливает по дефолту*!*/
+/**, h1, h2, h3, h4, h5, h6, p, ul, a {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
+/*!* в ширину и высоту будут включины pading and border *!*/
+/**,*/
+/**:before,*/
+/**:after {*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*!* что бы ничего не вылазило за границы элементов и не появлялся горизонтальный скрол на странице*!*/
+/*html, body {*/
+/*  overflow-x: hidden;*/
+/*}*/
+
+/*!*  *!*/
+/*body {*/
+/*  font-family: "Open Sans", sans-serif;*/
+/*  font-size: 15px;*/
+/*  line-height: 1.6;*/
+/*  color: #666;*/
+
+/*  !*for sticky footer*!*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+/*main {*/
+/*  flex: 1;*/
+/*}*/
+
+/*!* Стили для линка (кнопка-ссылка после текста, например "Далее") *!*/
+/*a {*/
+/*  color: #4a90e2;*/
+/*  !* не нужно подчеркивание линка*!*/
+/*  text-decoration: none;*/
+/*  transition: all .3s ease;*/
+/*}*/
+
+/*!* для линков (кнопка "Далее"), которые не используют класс Button - при наведении мышки цвет будет меняться *!*/
+/*a:not(.btn):hover {*/
+/*  color: #4872e2;*/
+/*}*/
+
+/*!*когда линк (кнопка "Далее") после параграфа - задаем такие параметры, что бы не "накидывать" лишние классы*!*/
+/*p + a:not(.btn) {*/
+/*  font-size: 13px;*/
+/*  font-weight: 700;*/
+/*}*/
+
+/*!* значения для заголовков *!*/
+/*h1, h2, h3, h4, h5, h6 {*/
+/*  line-height: 1.25;*/
+/*  font-weight: 300;*/
+/*  color: #252525;*/
+/*}*/
+
+/*!*стили для мобильных устройств. все 4 размера *!*/
+/*h1 {*/
+/*  font-size: 34px;*/
+/*}*/
+
+/*h2 {*/
+/*  font-size: 28px;*/
+/*}*/
+
+/*h3 {*/
+/*  font-size: 22px;*/
+/*}*/
+
+/*h4 {*/
+/*  font-size: 18px;*/
+/*}*/
+
+/*!* минимальная ширина экрана. начиная с 992px у нас будут следующие размеры... *!*/
+/*@media (min-width: 992px) {*/
+/*  h1 {*/
+/*    font-size: 44px;*/
+/*  }*/
+
+/*  h2 {*/
+/*    font-size: 33px;*/
+/*  }*/
+
+/*  h4 {*/
+/*    font-size: 20px;*/
+/*  }*/
+
+/*}*/
+
+/*img {*/
+/*  max-width: 100%;*/
+/*}*/
+/*h3 {*/
+/*  font-size: 26px;*/
+/*}*/
+
+/*!*стили для label(надписи над формами "Name", "Email", "Message")*!*/
+/*label {*/
+/*  display: inline-block;*/
+/*  font-size: 12px;*/
+/*  color: #666666;*/
+/*  margin-bottom: 3px;*/
+/*}*/
+
+/*!*Поле Your Message имеет свои границы.можно растягивать только вниз*!*/
+/*textarea {*/
+/*  max-width: 100%;*/
+/*  min-width: 100%;*/
+/*  max-height: 200px;*/
+/*  min-height: 50px;*/
+/*}*/
+
+/*!* Global. Контейнер *!*/
+/*.container {*/
+/*  max-width: 1280px;*/
+/*  width: 100%;*/
+/*  margin: 0 auto;*/
+/*  padding-right: 15px;*/
+/*  padding-left: 15px;*/
+/*}*/
+
+/*.lead {*/
+/*  font-size: 16px;*/
+/*  color: #808080;*/
+/*  font-weight: 500;*/
+/*}*/
+
+/*!*текст на десктопе должен быть больше*!*/
+/*@media (min-width: 992px) {*/
+/*  .lead {*/
+/*    font-size: 19px;*/
+/*  }*/
+/*}*/
+
+/*!*клас для отступов колонок с сервисами*!*/
+/*.section-padding {*/
+/*  padding-top: 80px;*/
+/*  padding-bottom: 80px;*/
+/*}*/
+
+/*.section-grey {*/
+/*  border-top: 1px solid #ebebeb;*/
+/*  background-color: #fafafa;*/
+/*}*/
+
+/*!*тени для картинок*!*/
+/*.img-shadow {*/
+/*  box-shadow: 0 23px 40px rgba(0, 0, 0, .2);*/
+/*}*/
+
+/*!*скругление*!*/
+/*.img-rounded {*/
+/*  border-radius: 6px;*/
+/*}*/
+
+/*.mb-0 {*/
+/*  margin-bottom: 0 !important;*/
+/*}*/
+
+/*!*Buttons ("Кнопки"). Отцентровать кнопку "My example"*!*/
+/*.btn {*/
+/*  display: inline-flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  height: 42px;*/
+/*  border-radius: 6px;*/
+/*  padding: 5px 35px;*/
+/*  transition: 0.1s linear;*/
+/*}*/
+
+/*!*добавим цвета кнопкам*!*/
+/*.btn-primary {*/
+/*  background-color: #4a90e2;*/
+/*  color: #fff;*/
+/*  letter-spacing: .5px;*/
+/*  text-transform: uppercase;*/
+/*  font-size: 13px;*/
+/*}*/
+
+/*!*при наведении мышки на кнопку*!*/
+/*.btn-primary:hover {*/
+/*  background-color: #609de6;*/
+/*  transform: translate3d(0, -2px, 0);*/
+/*}*/
+
+/*!*Navigation bar. Кнопки навигации*!*/
+/*.navbar {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*  width: 100%;*/
+/*  height: 66px;*/
+/*  z-index: 4;*/
+/*}*/
+
+/*.navbar > .container {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  flex-wrap: wrap;*/
+/*}*/
+
+/*.navbar-brand img {*/
+/*  max-width: 160px;*/
+/*}*/
+
+/*.navbar-nav {*/
+/*  margin-left: auto;*/
+/*}*/
+
+/*!*создаем стили для линков (Home | About | Contact)*!*/
+/*.navbar-nav ul {*/
+/*  display: flex;*/
+/*  list-style: none;*/
+/*  margin-left: -15px;*/
+/*  margin-right: -15px;*/
+/*}*/
+
+/*.navbar-nav li {*/
+/*  padding-left: 15px;*/
+/*  padding-right: 15px;*/
+/*}*/
+
+/*.navbar-nav li a {*/
+/*  color: #fff;*/
+/*  text-transform: uppercase;*/
+/*  font-size: 14px;*/
+/*  opacity: .6;*/
+/*  letter-spacing: .5px;*/
+/*  transition: opacity .3s ease;*/
+/*}*/
+
+/*!*стили при наведении мышкой на кнопку*!*/
+/*.navbar-nav li a:hover {*/
+/*  color: #fff;*/
+/*  opacity: 1;*/
+/*}*/
+
+/*!*стили для мобильных девайсов*!*/
+/*@media (max-width: 500px) {*/
+/*  .navbar-brand {*/
+/*    max-width: 100%;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*    padding-top: 25px;*/
+/*    margin-bottom: 10px;*/
+/*  }*/
+
+/*  .navbar-brand img {*/
+/*    max-width: 130px;*/
+/*  }*/
+
+/*  .navbar-nav {*/
+/*    margin: 0 auto;*/
+/*  }*/
+/*}*/
+
+/*!* Hero cекция. Главный баннер*!*/
+/*.hero {*/
+/*  position: relative;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  min-height: 70vh;*/
+/*  padding-top: 80px;*/
+/*  padding-bottom: 80px;*/
+/*  text-align: center;*/
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*}*/
+
+/*.hero.hero-sm {*/
+/*  min-height: 40vh;*/
+/*}*/
+
+/*!*связано с главным баннером. создает затемнение фоном*!*/
+/*.hero:before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  background-color: #252525;*/
+/*  opacity: .5;*/
+/*}*/
+
+/*!*стилизуем текст на главном баннере*!*/
+/*.hero .container {*/
+/*  position: relative;*/
+/*  max-width: 800px;*/
+/*}*/
+
+/*!*главный баннер*!*/
+/*.hero h1 {*/
+/*  margin-bottom: 24px;*/
+/*  color: #fff;*/
+/*}*/
+
+/*!*текст под заголовком баннера*!*/
+/*.hero p {*/
+/*  margin-bottom: 35px;*/
+/*  font-weight: 300;*/
+/*  opacity: .8;*/
+/*  color: #fff;*/
+/*}*/
+
+/*!*Projects Section*!*/
+/*.services {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  flex-wrap: wrap;*/
+/*  text-align: center;*/
+/*  margin-left: -15px;*/
+/*  margin-right: -15px;*/
+/*}*/
+
+/*!*для колонок*!*/
+/*.service-col {*/
+/*  max-width: 100%;*/
+/*  width: 100%;*/
+/*  padding-left: 40px;*/
+/*  padding-right: 40px;*/
+/*  margin-bottom: 30px;*/
+/*}*/
+
+/*.service {*/
+/*  padding: 25px;*/
+/*  border: 1px solid #ececec;*/
+/*}*/
+
+/*.service img {*/
+/*  opacity: .6;*/
+/*  max-width: 100px;*/
+/*  margin-bottom: 24px;*/
+/*}*/
+
+/*!*для заголовка*!*/
+/*.service h4 {*/
+/*  font-weight: 400;*/
+/*  margin-bottom: 12px;*/
+/*}*/
+
+/*.service p {*/
+/*  max-width: 280px;*/
+/*  margin: 0 auto 30px auto;*/
+/*  font-size: 13px;*/
+/*  line-height: 1.7;*/
+/*}*/
+
+/*!*для десктопа, начиная с планшетов*!*/
+/*@media (min-width: 768px) {*/
+/*  .service-col {*/
+/*    max-width: calc(100% / 2);*/
+/*    width: 100%;*/
+/*    margin-bottom: 0;*/
+/*  }*/
+/*}*/
+
+/*!*Split section*!*/
+/*.split-section {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  flex-wrap: wrap;*/
+/*}*/
+
+/*!*картинка вверху текста*!*/
+/*.split-section-image {*/
+/*  order: -1;*/
+/*  margin-bottom: 40px;*/
+/*}*/
+
+/*.split-section-image,*/
+/*.split-section-text {*/
+/*  max-width: 100%;*/
+/*  width: 100%;*/
+/*}*/
+
+/*.split-section h2,*/
+/*.split-section p {*/
+/*  margin-bottom: 30px;*/
+/*}*/
+
+/*!*стили для планшетов и выше*!*/
+/*@media (min-width: 768px) {*/
+/*  .split-section {*/
+/*    margin-left: -25px;*/
+/*    margin-right: -25px;*/
+/*  }*/
+
+/*  .split-section-image {*/
+/*    order: initial;*/
+/*    margin-bottom: 0;*/
+/*  }*/
+
+/*  .split-section-image,*/
+/*  .split-section-text {*/
+/*    max-width: 50%;*/
+/*    width: 100%;*/
+/*    padding-right: 25px;*/
+/*    padding-left: 25px;*/
+/*  }*/
+/*}*/
+
+/*!*создаем стили для секции Contact form*!*/
+/*.contact-form {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  margin-left: -25px;*/
+/*  margin-right: -25px;*/
+/*}*/
+
+/*.contact-form__info,*/
+/*.contact-form__form {*/
+/*  padding-right: 25px;*/
+/*  padding-left: 25px;*/
+/*}*/
+
+/*!*текст вниз, а форма наверх*!*/
+/*.contact-form__info {*/
+/*  order: -1;*/
+/*  margin-bottom: 30px;*/
+/*}*/
+
+/*!*стили для планшетов и десктопа*!*/
+/*@media (min-width: 768px) {*/
+/*  .contact-form__info,*/
+/*  .contact-form__form {*/
+/*    max-width: 50%;*/
+/*    width: 100%;*/
+/*  }*/
+
+/*  .contact-form__info {*/
+/*    order: initial;*/
+/*    margin-bottom: 0;*/
+/*  }*/
+/*}*/
+
+/*!*стили для форм*!*/
+/*.form-control {*/
+/*  width: 100%;*/
+/*  font-size: 16px;*/
+/*  background-color: #fcfcfc;*/
+/*  padding: 5px 15px;*/
+/*  border-radius: 6px;*/
+/*  border: 1px solid #ececec;*/
+/*  -webkit-appearance: none; !*что бы наш инпут не наследовал стили "вебкитных" браузеров (например Сафари)*!*/
+/*}*/
+
+/*.form-control:not(textarea) {*/
+/*  height: 44px;*/
+/*}*/
+
+/*textarea.form-control {*/
+/*  padding-top: 10px;*/
+/*}*/
+
+/*.form-layout {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  margin-left: -15px;*/
+/*  margin-right: -15px;*/
+/*}*/
+
+/*[class*='form-col'] { !*выбираем все классы с названием form-col*!*/
+/*  width: 100%;*/
+/*  padding-left: 15px;*/
+/*  padding-right: 15px;*/
+/*  margin-bottom: 15px;*/
+/*}*/
+
+/*@media (min-width: 768px) {*/
+/*  .form-col-50 {*/
+/*    max-width: 50%;*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
+
+/*!*Footer. Нижний колонтитул*!*/
+/*.footer-row {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  padding-top: 30px;*/
+/*  padding-bottom: 30px;*/
+/*}*/
+
+/*.footer-copyright {*/
+/*  padding-left: 30px;*/
+/*  opacity: .6;*/
+/*}*/
+
+/*.footer-social {*/
+/*  display: flex;*/
+/*  list-style: none;*/
+/*  align-items: center;*/
+/*  padding-right: 30px;*/
+/*}*/
+
+/*.footer-social li {*/
+/*  padding-left: 12px;*/
+/*  padding-right: 12px;*/
+/*}*/
+
+/*.footer-social a {*/
+/*  opacity: .7;*/
+/*}*/
+
+/*.footer-social a:hover {*/
+/*  opacity: 1;*/
+/*}*/
+
+/*!*значение ширины для иконок*!*/
+/*.footer-social img {*/
+/*  max-width: 20px;*/
+/*}*/
+
+/*a.more-btn {*/
+/*  border: 1px solid #609de6;*/
+/*  color: #4d7eba;*/
+/*  border-radius: 4px;*/
+/*  height: 36px;*/
+/*  width: 120px;*/
+/*  display: inline-flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  font-size: 13px;*/
+/*  text-transform: uppercase;*/
+/*  box-shadow: none;*/
+/*  background: transparent;*/
+/*  transition: .2s;*/
+/*  cursor: pointer;*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*a.more-btn:hover {*/
+/*  background: #4d7eba;*/
+/*  color: #ffffff;*/
+/*  transition: none;*/
+/*}*/
+
+/*a.more-btn:active {*/
+/*  transform: translateY(2px);*/
+/*}*/
