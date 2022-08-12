@@ -1,0 +1,19 @@
+.borders__contacts {
+    border: 50px;
+    margin: 50px;
+    max-width: 50%;
+}
+
+.yourmessage__size {
+    height: 50px;
+    weight: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-copyright {
+    padding-left: 30px;
+    opacity: .6;
+}
+.submit__button {
+    margin: 10px 0 0 0;
+}

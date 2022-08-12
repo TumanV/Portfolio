@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+/*верхняя панель всегда видна при скроле*/
+body{
+  min-height: 100vh;
+}
+
+/*верхняя панель*/
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.app__header {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.app__content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+body {
+  height: 2000px;
+}

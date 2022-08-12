@@ -1,0 +1,16 @@
+.footer__margin {
+    margin: 10px;
+    float: right;
+    border-right: 20px;
+}
+
+.footer__copyright {
+    padding-left: 10px;
+    opacity: .6;
+    font-size: 90%;
+}
+
+.linkedin {
+    width: 25px;
+}
+
